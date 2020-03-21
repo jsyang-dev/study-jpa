@@ -4,9 +4,14 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-public class Member {
+@TableGenerator(name = "member_seq_generator",
+        table = "my_sequences",
+        pkColumnValue = "member_seq",
+        allocationSize = 1)
+public class MemberTB {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.TABLE, generator = "member_seq_generator")
     private Long id;
 
     @Column(name = "name", nullable = false)
@@ -26,7 +31,7 @@ public class Member {
     @Lob
     private String description;
 
-    public Member() {
+    public MemberTB() {
     }
 
     public Long getId() {

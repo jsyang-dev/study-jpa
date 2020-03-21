@@ -15,6 +15,23 @@ public class JpaMain {
         tx.begin();
 
         try {
+            MemberID memberID = new MemberID();
+            memberID.setUsername("name");
+            em.persist(memberID);
+            System.out.println("memberID.id = " + memberID.getId());
+            System.out.println("========== IDENTITY END ==========");
+
+            MemberSQ memberSQ = new MemberSQ();
+            memberSQ.setUsername("name");
+            em.persist(memberSQ);
+            System.out.println("memberSQ.id = " + memberSQ.getId());
+            System.out.println("========== SEQUENCE END ==========");
+
+            MemberTB memberTB = new MemberTB();
+            memberTB.setUsername("name");
+            em.persist(memberTB);
+            System.out.println("memberTB.id = " + memberTB.getId());
+            System.out.println("========== TABLE END ==========");
 
             tx.commit();
         } catch (Exception e) {
