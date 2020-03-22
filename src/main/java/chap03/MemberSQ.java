@@ -3,7 +3,7 @@ package chap03;
 import javax.persistence.*;
 import java.util.Date;
 
-@Entity
+//@Entity
 @SequenceGenerator(name = "member_seq_generator", sequenceName = "member_seq")
 public class MemberSQ {
 

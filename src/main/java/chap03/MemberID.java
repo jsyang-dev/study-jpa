@@ -3,7 +3,7 @@ package chap03;
 import javax.persistence.*;
 import java.util.Date;
 
-@Entity
+//@Entity
 public class MemberID {
 
     @Id
