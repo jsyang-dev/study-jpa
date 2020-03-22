@@ -1,11 +1,11 @@
-package ex2;
+package chap02;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
-public class Flush {
+public class Detach {
 
     public static void main(String[] args) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello");
@@ -15,10 +15,10 @@ public class Flush {
         tx.begin();
 
         try {
-            Member member = new Member(100L, "Member100");
-            em.persist(member);
+            Member findMember = em.find(Member.class, 1L);
+            findMember.setName("ZZZZZZ");
 
-            em.flush();
+            em.detach(findMember);
 
             System.out.println("====================");
 

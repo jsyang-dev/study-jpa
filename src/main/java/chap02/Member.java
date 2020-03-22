@@ -1,4 +1,4 @@
-package ex2;
+package chap02;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

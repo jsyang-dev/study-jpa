@@ -1,17 +1,14 @@
-package ex3;
+package chap03;
 
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@TableGenerator(name = "member_seq_generator",
-        table = "my_sequences",
-        pkColumnValue = "member_seq",
-        allocationSize = 1)
-public class MemberTB {
+@SequenceGenerator(name = "member_seq_generator", sequenceName = "member_seq")
+public class MemberSQ {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE, generator = "member_seq_generator")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "member_seq_generator")
     private Long id;
 
     @Column(name = "name", nullable = false)
@@ -31,7 +28,7 @@ public class MemberTB {
     @Lob
     private String description;
 
-    public MemberTB() {
+    public MemberSQ() {
     }
 
     public Long getId() {

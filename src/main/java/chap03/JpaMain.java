@@ -1,4 +1,4 @@
-package ex3;
+package chap03;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

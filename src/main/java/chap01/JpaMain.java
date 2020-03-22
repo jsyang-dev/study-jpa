@@ -1,11 +1,12 @@
-package ex2;
+package chap01;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
+import java.util.List;
 
-public class Persist {
+public class JpaMain {
 
     public static void main(String[] args) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello");
@@ -15,18 +16,19 @@ public class Persist {
         tx.begin();
 
         try {
-            Member findMember1 = em.find(Member.class, 1L);
-            Member findMember2 = em.find(Member.class, 1L);
+            Member newMember = new Member();
+            newMember.setId(1L);
+            newMember.setName("HelloA");
+            em.persist(newMember);
 
-            System.out.println("result = " + (findMember1 == findMember2));
+            Member updateMember = em.find(Member.class, 1L);
+            updateMember.setName("HelloJPA");
 
-            Member member1 = new Member(30L, "A");
-            Member member2 = new Member(40L, "B");
+            List<Member> result = em.createQuery("select m from MemberSQ as m", Member.class).getResultList();
 
-            em.persist(member1);
-            em.persist(member2);
-
-            System.out.println("====================");
+            for (Member member : result) {
+                System.out.println("member.name = " + member.getName());
+            }
 
             tx.commit();
         } catch (Exception e) {

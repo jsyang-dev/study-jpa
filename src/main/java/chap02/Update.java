@@ -1,11 +1,11 @@
-package ex2;
+package chap02;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
-public class Detach {
+public class Update {
 
     public static void main(String[] args) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello");
@@ -17,8 +17,6 @@ public class Detach {
         try {
             Member findMember = em.find(Member.class, 1L);
             findMember.setName("ZZZZZZ");
-
-            em.detach(findMember);
 
             System.out.println("====================");
 
