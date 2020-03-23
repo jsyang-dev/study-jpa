@@ -2,7 +2,7 @@ package chap04;
 
 import javax.persistence.*;
 
-@Entity
+//@Entity
 public class Member {
 
     @Id
