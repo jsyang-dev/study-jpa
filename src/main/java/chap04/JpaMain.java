@@ -23,8 +23,12 @@ public class JpaMain {
 
             Member member = new Member();
             member.setUsername("member1");
-            member.setTeam(team);
+            member.changeTeam(team);
             em.persist(member);
+
+            for (Member m : team.getMembers()) {
+                System.out.println("m = " + m.getUsername());
+            }
 
             em.flush();
             em.clear();
@@ -40,7 +44,7 @@ public class JpaMain {
             teamB.setName("TeamB");
             em.persist(teamB);
 
-            findMember.setTeam(teamB);
+            findMember.changeTeam(teamB);
 
             em.flush();
             em.clear();
