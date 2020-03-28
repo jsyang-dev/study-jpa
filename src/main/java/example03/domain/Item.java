@@ -1,10 +1,13 @@
 package example03.domain;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
+//@Entity
 public class Item {
 
     @Id
