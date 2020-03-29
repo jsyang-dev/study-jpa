@@ -1,9 +1,8 @@
 package chap08;
 
 import javax.persistence.DiscriminatorValue;
-import javax.persistence.Entity;
 
-@Entity
+//@Entity
 @DiscriminatorValue("A")
 public class Album extends Item {
 

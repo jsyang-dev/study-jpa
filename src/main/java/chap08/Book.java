@@ -1,9 +1,8 @@
 package chap08;
 
 import javax.persistence.DiscriminatorValue;
-import javax.persistence.Entity;
 
-@Entity
+//@Entity
 @DiscriminatorValue("B")
 public class Book extends Item {
 
