@@ -2,7 +2,7 @@ package example04.domain;
 
 import javax.persistence.*;
 
-@Entity
+//@Entity
 public class OrderItem extends BaseEntity {
 
     @Id
