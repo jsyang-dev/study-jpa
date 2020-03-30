@@ -1,10 +1,10 @@
-package chap10;
+package chap11;
 
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-//@Entity
+@Entity
 public class Team extends BaseEntity {
 
     @Id
@@ -14,8 +14,7 @@ public class Team extends BaseEntity {
 
     private String name;
 
-    @OneToMany
-    @JoinColumn(name = "TEAM_ID")
+    @OneToMany(mappedBy = "team")
     private List<Member> members = new ArrayList<>();
 
     public Long getId() {
