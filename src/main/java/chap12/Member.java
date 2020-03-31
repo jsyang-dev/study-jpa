@@ -1,8 +1,8 @@
-package chap11;
+package chap12;
 
 import javax.persistence.*;
 
-//@Entity
+@Entity
 public class Member extends BaseEntity {
 
     @Id
