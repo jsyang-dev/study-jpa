@@ -1,8 +1,11 @@
 package example05.domain;
 
-import javax.persistence.*;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
-@Entity
+//@Entity
 public class Delivery extends BaseEntity {
 
     @Id

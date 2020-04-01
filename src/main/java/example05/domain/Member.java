@@ -1,10 +1,13 @@
 package example05.domain;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
+//@Entity
 public class Member extends BaseEntity {
 
     @Id
