@@ -1,10 +1,13 @@
 package chap12;
 
-import javax.persistence.*;
+import javax.persistence.CascadeType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
+//@Entity
 public class Parent {
 
     @Id
