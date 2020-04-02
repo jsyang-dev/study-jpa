@@ -1,8 +1,11 @@
-package chpa13;
+package chap13;
 
-import javax.persistence.*;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
-@Entity
+//@Entity
 public class Child {
 
     @Id

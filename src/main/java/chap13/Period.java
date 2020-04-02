@@ -1,4 +1,4 @@
-package chpa13;
+package chap13;
 
 import javax.persistence.Embeddable;
 import java.time.LocalDateTime;
