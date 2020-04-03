@@ -1,11 +1,8 @@
-package me.study.jpa.chap14;
+package me.study.jpa.chap15;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
-//@Entity
+@Entity
 public class Child {
 
     @Id

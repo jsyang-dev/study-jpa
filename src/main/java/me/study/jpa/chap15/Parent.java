@@ -1,13 +1,10 @@
-package me.study.jpa.chap14;
+package me.study.jpa.chap15;
 
-import javax.persistence.CascadeType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-//@Entity
+@Entity
 public class Parent {
 
     @Id
