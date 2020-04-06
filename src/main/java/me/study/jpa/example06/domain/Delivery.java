@@ -2,7 +2,7 @@ package me.study.jpa.example06.domain;
 
 import javax.persistence.*;
 
-@Entity
+//@Entity
 public class Delivery extends BaseEntity {
 
     @Id

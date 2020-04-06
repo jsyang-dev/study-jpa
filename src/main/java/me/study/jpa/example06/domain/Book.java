@@ -1,8 +1,6 @@
 package me.study.jpa.example06.domain;
 
-import javax.persistence.Entity;
-
-@Entity
+//@Entity
 public class Book extends Item {
 
     private String author;
