@@ -3,7 +3,7 @@ package me.study.jpa.chap14;
 import javax.persistence.*;
 
 //@Entity
-public class Member extends BaseEntity {
+public class Member {
 
     @Id
     @GeneratedValue
@@ -12,10 +12,6 @@ public class Member extends BaseEntity {
 
     @Column(name = "USERNAME")
     private String username;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "TEAM_ID")
-    private Team team;
 
     @Embedded
     private Period period;
@@ -45,22 +41,6 @@ public class Member extends BaseEntity {
 
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    public Team getTeam() {
-        return team;
-    }
-
-    public void setTeam(Team team) {
-        this.team = team;
-    }
-
-    public Period getPeriod() {
-        return period;
-    }
-
-    public void setPeriod(Period period) {
-        this.period = period;
     }
 
     public Address getHomeAddress() {

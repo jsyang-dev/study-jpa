@@ -1,20 +1,18 @@
-package me.study.jpa.chap14;
+package me.study.jpa.chap18;
 
-import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import java.util.ArrayList;
 import java.util.List;
 
-//@Entity
-public class Team extends BaseEntity {
+@Entity
+public class Team {
 
     @Id
     @GeneratedValue
-    @Column(name = "TEAM_ID")
     private Long id;
-
     private String name;
 
     @OneToMany(mappedBy = "team")
