@@ -1,11 +1,12 @@
-package me.study.jpa.chap20;
+package me.study.jpa.chap21;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import java.util.List;
 
-//@Entity
+@Entity
 public class Product {
 
     @Id
@@ -16,7 +17,7 @@ public class Product {
     private int stockAmount;
 
     @OneToMany(mappedBy = "product")
-    private List<Order> orders;
+    private List<me.study.jpa.chap21.Order> orders;
 
     public Long getId() {
         return id;
@@ -50,7 +51,7 @@ public class Product {
         this.stockAmount = stockAmount;
     }
 
-    public List<Order> getOrders() {
+    public List<me.study.jpa.chap21.Order> getOrders() {
         return orders;
     }
 

@@ -1,11 +1,8 @@
-package me.study.jpa.chap20;
+package me.study.jpa.chap21;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
-//@Entity
+@Entity
 public class Member {
 
     @Id
@@ -14,9 +11,9 @@ public class Member {
     private String username;
     private int age;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "TEAM_ID")
-    private Team team;
+    private me.study.jpa.chap21.Team team;
 
     public Long getId() {
         return id;
@@ -42,12 +39,13 @@ public class Member {
         this.age = age;
     }
 
-    public Team getTeam() {
+    public me.study.jpa.chap21.Team getTeam() {
         return team;
     }
 
-    public void setTeam(Team team) {
+    public void changeTeam(Team team) {
         this.team = team;
+        team.getMembers().add(this);
     }
 
     @Override

@@ -1,12 +1,13 @@
-package me.study.jpa.chap20;
+package me.study.jpa.chap21;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import java.util.ArrayList;
 import java.util.List;
 
-//@Entity
+@Entity
 public class Team {
 
     @Id
@@ -15,7 +16,7 @@ public class Team {
     private String name;
 
     @OneToMany(mappedBy = "team")
-    private List<me.study.jpa.chap20.Member> members = new ArrayList<>();
+    private List<me.study.jpa.chap21.Member> members = new ArrayList<>();
 
     public Long getId() {
         return id;
@@ -33,7 +34,7 @@ public class Team {
         this.name = name;
     }
 
-    public List<me.study.jpa.chap20.Member> getMembers() {
+    public List<me.study.jpa.chap21.Member> getMembers() {
         return members;
     }
 
