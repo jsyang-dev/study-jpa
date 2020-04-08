@@ -12,11 +12,11 @@ public class Order {
     private int orderAmount;
 
     @Embedded
-    private me.study.jpa.chap20.Address address;
+    private Address address;
 
     @ManyToOne
     @JoinColumn(name = "PRODUCT_ID")
-    private me.study.jpa.chap20.Product product;
+    private Product product;
 
     public Long getId() {
         return id;

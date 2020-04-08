@@ -2,7 +2,7 @@ package me.study.jpa.chap21;
 
 import javax.persistence.*;
 
-@Entity
+//@Entity
 @Table(name = "ORDERS")
 public class Order {
 
@@ -12,11 +12,11 @@ public class Order {
     private int orderAmount;
 
     @Embedded
-    private me.study.jpa.chap21.Address address;
+    private Address address;
 
     @ManyToOne
     @JoinColumn(name = "PRODUCT_ID")
-    private me.study.jpa.chap21.Product product;
+    private Product product;
 
     public Long getId() {
         return id;
@@ -34,7 +34,7 @@ public class Order {
         this.orderAmount = orderAmount;
     }
 
-    public me.study.jpa.chap21.Address getAddress() {
+    public Address getAddress() {
         return address;
     }
 
@@ -42,7 +42,7 @@ public class Order {
         this.address = address;
     }
 
-    public me.study.jpa.chap21.Product getProduct() {
+    public Product getProduct() {
         return product;
     }
 

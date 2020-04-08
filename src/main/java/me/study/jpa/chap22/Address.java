@@ -1,4 +1,4 @@
-package me.study.jpa.chap21;
+package me.study.jpa.chap22;
 
 import javax.persistence.Embeddable;
 import java.util.Objects;

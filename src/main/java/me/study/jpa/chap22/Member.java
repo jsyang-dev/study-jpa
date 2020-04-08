@@ -1,8 +1,8 @@
-package me.study.jpa.chap21;
+package me.study.jpa.chap22;
 
 import javax.persistence.*;
 
-//@Entity
+@Entity
 public class Member {
 
     @Id
@@ -10,6 +10,8 @@ public class Member {
     private Long id;
     private String username;
     private int age;
+    @Enumerated(EnumType.STRING)
+    private MemberType memberType;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "TEAM_ID")
@@ -43,9 +45,17 @@ public class Member {
         return team;
     }
 
-    public void changeTeam(Team team) {
+    public void setTeam(Team team) {
         this.team = team;
         team.getMembers().add(this);
+    }
+
+    public MemberType getMemberType() {
+        return memberType;
+    }
+
+    public void setMemberType(MemberType memberType) {
+        this.memberType = memberType;
     }
 
     @Override

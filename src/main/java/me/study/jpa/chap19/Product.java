@@ -16,7 +16,7 @@ public class Product {
     private int stockAmount;
 
     @OneToMany(mappedBy = "product")
-    private List<me.study.jpa.chap19.Order> orders;
+    private List<Order> orders;
 
     public Long getId() {
         return id;
@@ -50,7 +50,7 @@ public class Product {
         this.stockAmount = stockAmount;
     }
 
-    public List<me.study.jpa.chap19.Order> getOrders() {
+    public List<Order> getOrders() {
         return orders;
     }
 

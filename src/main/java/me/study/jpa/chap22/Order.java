@@ -1,8 +1,8 @@
-package me.study.jpa.chap19;
+package me.study.jpa.chap22;
 
 import javax.persistence.*;
 
-//@Entity
+@Entity
 @Table(name = "ORDERS")
 public class Order {
 
@@ -34,7 +34,7 @@ public class Order {
         this.orderAmount = orderAmount;
     }
 
-    public me.study.jpa.chap19.Address getAddress() {
+    public Address getAddress() {
         return address;
     }
 
@@ -42,7 +42,7 @@ public class Order {
         this.address = address;
     }
 
-    public me.study.jpa.chap19.Product getProduct() {
+    public Product getProduct() {
         return product;
     }
 
