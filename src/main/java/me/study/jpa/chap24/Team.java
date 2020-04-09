@@ -1,12 +1,13 @@
-package me.study.jpa.chap23;
+package me.study.jpa.chap24;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import java.util.ArrayList;
 import java.util.List;
 
-//@Entity
+@Entity
 public class Team {
 
     @Id
