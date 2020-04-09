@@ -1,8 +1,8 @@
-package me.study.jpa.chap22;
+package me.study.jpa.chap23;
 
 import javax.persistence.*;
 
-//@Entity
+@Entity
 @Table(name = "ORDERS")
 public class Order {
 
