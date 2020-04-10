@@ -125,6 +125,16 @@ public class JpaMain {
                 System.out.println("member = " + member);
             }
 
+            em.clear();
+
+            int resultCount = em.createQuery("update Member m set m.age = 20")
+                    .executeUpdate();
+
+            System.out.println("resultCount = " + resultCount);
+
+            member1 = em.find(Member.class, member1.getId());
+            System.out.println("member1 = " + member1);
+            
             tx.commit();
         } catch (Exception e) {
             tx.rollback();
